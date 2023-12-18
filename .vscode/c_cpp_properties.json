@@ -1,0 +1,37 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/jensen/catkin_ws/devel/include/**",
+        "/home/jensen/catkin_ws/src/aruco_ros/aruco/include/**",
+        "/home/jensen/catkin_ws/src/aruco_ros/aruco_ros/include/**",
+        "/home/jensen/catkin_ws/src/grasp_exercise/include/**",
+        "/home/jensen/catkin_ws/src/grasp_experiments/include/**",
+        "/home/jensen/catkin_ws/src/grasp_icp/include/**",
+        "/home/jensen/catkin_ws/src/robotiq/robotiq_2f_gripper_action_server/include/**",
+        "/home/jensen/catkin_ws/src/robotiq/robotiq_2f_gripper_control/include/**",
+        "/home/jensen/catkin_ws/src/robotiq/robotiq_3f_gripper_articulated_gazebo_plugins/include/**",
+        "/home/jensen/catkin_ws/src/robotiq/robotiq_3f_gripper_control/include/**",
+        "/home/jensen/catkin_ws/src/robotiq/robotiq_ethercat/include/**",
+        "/home/jensen/catkin_ws/src/robotiq/robotiq_ft_sensor/include/**",
+        "/home/jensen/catkin_ws/src/ur5_moveit_ikfast_plugins/ur5_moveit_ikfast_plugin/include/**",
+        "/home/jensen/catkin_ws/src/Universal_Robots_ROS_Driver/ur_calibration/include/**",
+        "/home/jensen/catkin_ws/src/universal_robot/ur_kinematics/include/**",
+        "/home/jensen/catkin_ws/src/Universal_Robots_ROS_Driver/ur_robot_driver/include/**",
+        "/home/jensen/catkin_ws/src/vision_visp/visp_bridge/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

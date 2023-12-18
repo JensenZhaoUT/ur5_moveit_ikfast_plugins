@@ -1,0 +1,30 @@
+rosrun xacro xacro -o ur5o.urdf ur5.xacro
+rosrun collada_urdf urdf_to_collada ur5.urdf ur5.dae
+rosrun moveit_kinematics round_collada_numbers.py ur5.dae ur5.dae 5
+openrave ur5.dae
+openrave-robot.py ur5.dae --info links
+python `openrave-config --python-dir`/openravepy/_openravepy_/ikfast.py --robot=ur5o.dae --iktype=transform6d --baselink=1 --eelink=9 --savefile=$(pwd)/ikfastur5.cpp
+cp /usr/local/lib/python2.7/dist-packages/openravepy/_openravepy_/ikfast.h .
+g++ ikfastur5.cpp -o ikfastur5 -llapack -std=c++11
+./ikfastur5
+cd src/
+mkdir ur5_moveit_ikfast_plugins
+cd ur5_moveit_ikfast_plugins
+rosrun moveit_kinematics create_ikfast_moveit_plugin.py ur5 manipulator ur5_moveit_ikfast_plugin "base_link" "flange"  ../grasp_icp/src/ur5/ikfastur5.cpp
+roslaunch ur5_moveit_config demo.launch
+
+IKFAST_API int* GetFreeParameters() { return NULL; }
+
+world to base_link 0 complete
+
+base_link to base 1 complete
+
+base to base_link_inertia 2 complete
+
+ee_link to flange 9 complete
+
+parent: wrist_3_link to flange 10 complete
+
+Visualize urdf and xacro with detailed information:
+urdf-viz URDF_FILE.urdf
+urdf-viz URDF_FILE.urdf.xacro
