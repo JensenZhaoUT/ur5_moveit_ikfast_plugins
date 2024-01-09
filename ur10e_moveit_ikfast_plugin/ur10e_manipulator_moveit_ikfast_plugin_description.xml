@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<library path="lib/libur10e_manipulator_moveit_ikfast_plugin">
+  <class name="ur10e_manipulator/IKFastKinematicsPlugin" type="ur10e_manipulator::IKFastKinematicsPlugin" base_class_type="kinematics::KinematicsBase">
+    <description>IKFast61 plugin for closed-form kinematics of ur10e manipulator</description>
+  </class>
+</library>
